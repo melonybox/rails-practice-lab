@@ -1,0 +1,19 @@
+<ol>
+  <% @author.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ol>
+
+<%= form_for @author do |f| %>
+<ul>
+  <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  <li>
+    <%= f.label :birth_year %>
+    <%= f.number_field :birth_year %>
+  </li>
+</ul>
+  <%= f.submit %>
+<% end %>
